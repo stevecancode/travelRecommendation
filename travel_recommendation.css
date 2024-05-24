@@ -14,12 +14,14 @@ html {
     box-sizing: border-box;
 }
 nav {
-    background-image: linear-gradient(#ffd5b0, #f79c4c);
+    /*background-image: linear-gradient(to bottom,rgba(255,0,0,0), #f4bb89, rgba(255,0,0,0));*/
+    background: none;
     background-size: 20%;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    opacity: 80%;
     
   }
   
@@ -34,15 +36,15 @@ nav {
   }
   
   nav a {
-    font:menu;
-    font-size: large;
+    font: menu;
+    font-size: larger;
     text-decoration: none;
     color: rgb(255, 255, 255);
   }
 
     /* Basic CSS for the form elements */
     body {
-        font-family: Arial, sans-serif;
+        font-family: monospace;
         /* margin: 20px; */
       }
       
@@ -66,10 +68,11 @@ nav {
         padding: 10px;
         border-radius: 10px;
         border: none;
+        opacity: 40%;
       }
 
       select:active {
-        border: none;
+        outline-color: #fc9e4c;
       }
       
       button {
@@ -78,7 +81,8 @@ nav {
         color: white;
         border: none;
         cursor: pointer;
-        border-radius: 10px
+        border-radius: 10px;
+        opacity: 80%
       }
       
       button:hover {
@@ -91,8 +95,9 @@ nav {
       }
 
       .icon-bar {
-        width: 34px; /* Set a specific width */
-        background-color: #fcd0aa; /* Dark-grey background */
+        width: 46px; /* Set a specific width */
+        background-color: none; /* Dark-grey background */
+        position: absolute;
       }
       
       .icon-bar a {
@@ -101,9 +106,17 @@ nav {
         padding: 5px; /* Add some padding */
         transition: all 0.3s ease; /* Add transition for hover effects */
         color: #fc9e4c; /* White text color */
-        font-size: 24px; /* Increased font-size */
+        font-size: 36px; /* Increased font-size */
       }
       
       .icon-bar a:hover {
         background-color: #f9eadc; /* Add a hover color */
+      }
+
+      .explore {
+        font-size: 80pt;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        offset-position: 100px;
       }
