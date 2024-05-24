@@ -12,111 +12,103 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "monaco", "verdana", "arial";
 }
-nav {
-    /*background-image: linear-gradient(to bottom,rgba(255,0,0,0), #f4bb89, rgba(255,0,0,0));*/
-    background: none;
-    background-size: 20%;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    opacity: 80%;
-    
-  }
-  
-  nav ul {
-    list-style-type: none;
-    /* padding: 0; */
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav a {
-    font: menu;
-    font-size: larger;
+
+.nav {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav a {
+    float: left;
+    text-align: center;
+    padding: 20px;
+    font-size: 14pt;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
+}
+
+.nav a:hover {
+    background:#796b80a7;
   }
 
-    /* Basic CSS for the form elements */
-    body {
-        font-family: monospace;
-        /* margin: 20px; */
-      }
-      
-      h1 {
-        margin-bottom: 20px;
-      }
-      
-      div {
-        margin-bottom: 10px;
-      }
-      
-      label {
-        display: inline-block;
-        width: 100px;
-      }
-      
-      input[type="text"],
-      input[type="number"],
-      select {
-        width: 240px;
-        padding: 10px;
-        border-radius: 10px;
-        border: none;
-        opacity: 40%;
-      }
+.nav-centered a {
+    float: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
-      select:active {
-        outline-color: #fc9e4c;
-      }
-      
-      button {
-        padding: 7px 15px;
-        background-color: #fc9e4c;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 10px;
-        opacity: 80%
-      }
-      
-      button:hover {
-        background-color: #ff8d2a;
-      }
-      
-      /* Basic CSS for the report section */
-      h2 {
-        margin-top: 30px;
-      }
+.nav-right {
+    float: right;
+    top: 50%;
+    transform: translatey(50%);
+}
 
-      .icon-bar {
-        width: 46px; /* Set a specific width */
-        background-color: none; /* Dark-grey background */
-        position: absolute;
-      }
-      
-      .icon-bar a {
-        display: block; /* Make the links appear below each other instead of side-by-side */
-        text-align: center; /* Center-align text */
-        padding: 5px; /* Add some padding */
-        transition: all 0.3s ease; /* Add transition for hover effects */
-        color: #fc9e4c; /* White text color */
-        font-size: 36px; /* Increased font-size */
-      }
-      
-      .icon-bar a:hover {
-        background-color: #f9eadc; /* Add a hover color */
-      }
+input[type="text"],
+input[type="number"],
+select {
+    width: 240px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    opacity: 40%;
+}
 
-      .explore {
-        font-size: 80pt;
-        font-weight: bold;
-        color: white;
-        position: absolute;
-        offset-position: 100px;
-      }
+select:active {
+outline-color: #fc9e4c;
+}
+
+button {
+    padding:5px 30px;
+    background-color: #fc9e4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    opacity: 80%;
+}
+
+button:hover {
+    opacity:100%;
+}
+
+.icon-bar {
+    width: 46px; /* Set a specific width */
+    background-color: none; /* Dark-grey background */
+    position: absolute;
+}
+
+.icon-bar a {
+    display: block; /* Make the links appear below each other instead of side-by-side */
+    text-align: center; /* Center-align text */
+    padding: 5px; /* Add some padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: #fc9e4c; /* White text color */
+    font-size: 36px; /* Increased font-size */
+}
+
+.icon-bar a:hover {
+    background-color: #f9eadc; /* Add a hover color */
+}
+
+.explore {
+    font-size: 60pt;
+    font-weight:bolder;
+    color: white;
+    position: absolute;
+    transform: translate(150px, 0px);
+    padding: 10px;
+}
+
+.description {
+    font-size: 14pt;
+    color: white;
+    position: absolute;
+    transform: translate(150px, 340px);
+    width: 660px;
+    background: #796b80a7;
+    padding: 10px;
+}
