@@ -62,7 +62,7 @@ html {
 input[type="text"], input[type="text"], textarea, select {
     width: 320px;
     padding: 10px;
-    border-radius: -15px;
+    border-radius: 10px;
     border: none;
     color: white;
     background: none;
@@ -155,8 +155,21 @@ form {
     color:white;
     background:#796b8080;
     padding:20px;
+    border-radius: 10px;
 }
 
-form button:hover {
+.button1 {
+    background-color:#755286;
+    width:100%;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    font-size: 14pt;
+}
+
+.button1:hover {
     background-color: #4a2f57;
 }
