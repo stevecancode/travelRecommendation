@@ -54,19 +54,22 @@ html {
 .search-container {
     background:rgba(255, 255, 255, 0.4);
     border-radius: 10px;
+    width:520px;
+    float:right;
+    font-size: 14pt;
 }
 
-input[type="text"],
-select {
-    width: 240px;
+input[type="text"], input[type="text"], textarea, select {
+    width: 320px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: -15px;
     border: none;
     color: white;
     background: none;
+    font-size: 14pt;
 }
 
-input:focus {
+input:focus, textarea:focus {
     outline: none;
     color: rgb(0, 0, 0);
   }  
@@ -79,6 +82,7 @@ button {
     cursor: pointer;
     border-radius: 10px;
     transition: all 0.3s ease; /* Add transition for hover effects */
+    font-size: 14pt;
 }
 
 button:hover {
@@ -89,7 +93,7 @@ button:hover {
     width: 46px; /* Set a specific width */
     background-color: none; /* Dark-grey background */
     position: absolute;
-    transform: translate(-30px, 60px);
+    transform: translate(-10px, 60px);
 }
 
 .icon-bar a {
@@ -122,4 +126,37 @@ button:hover {
     background: #796b8080;
     padding: 10px;
     width: 1000px;
+}
+
+.col-container {
+    display: table; /* Make the container element behave like a table */
+    width: 1000px; /* Set full-width to expand the whole page */
+    position: absolute;
+    transform: translate(150px, 0px);
+    color:white;
+    background:#796b8080;
+    text-align: center;
+    padding: 10px;
+}
+  
+.col-container p {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.col {
+    display: table-cell; /* Make elements inside the container behave like table cells */
+}
+
+form {
+    height:400px;
+    width:600px;
+    transform:translate(150px,150px);
+    color:white;
+    background:#796b8080;
+    padding:20px;
+}
+
+form button:hover {
+    background-color: #4a2f57;
 }
