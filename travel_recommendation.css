@@ -9,7 +9,7 @@ html {
 /* Basic CSS for the navigation bar */
 
 *{
-    margin: 0;
+    margin: 0px 5px;
     padding: 0;
     box-sizing: border-box;
     font-family: "monaco", "verdana", "arial";
@@ -27,15 +27,18 @@ html {
     font-size: 14pt;
     text-decoration: none;
     color: white;
+    transition: all 0.3s ease; /* Add transition for hover effects */
 }
 
 .nav a:hover {
-    background:#796b80a7;
+    color:#d7721a;
   }
 
 .nav-centered a {
     float: none;
     position: absolute;
+    font-weight: bolder;
+    font-size: 24pt;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -45,40 +48,48 @@ html {
     float: right;
     top: 50%;
     transform: translatey(50%);
+    color:white;
+}
+
+.search-container {
+    background:rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
 }
 
 input[type="text"],
-input[type="number"],
 select {
     width: 240px;
     padding: 10px;
     border-radius: 10px;
     border: none;
-    opacity: 40%;
+    color: white;
+    background: none;
 }
 
-select:active {
-outline-color: #fc9e4c;
-}
+input:focus {
+    outline: none;
+    color: rgb(0, 0, 0);
+  }  
 
 button {
-    padding:5px 30px;
-    background-color: #fc9e4c;
+    background-color:#fc9e4c;
     color: white;
+    padding: 5px 10px;
     border: none;
     cursor: pointer;
     border-radius: 10px;
-    opacity: 80%;
+    transition: all 0.3s ease; /* Add transition for hover effects */
 }
 
 button:hover {
-    opacity:100%;
+    background-color: #d7721a;
 }
 
 .icon-bar {
     width: 46px; /* Set a specific width */
     background-color: none; /* Dark-grey background */
     position: absolute;
+    transform: translate(-30px, 60px);
 }
 
 .icon-bar a {
@@ -91,10 +102,10 @@ button:hover {
 }
 
 .icon-bar a:hover {
-    background-color: #f9eadc; /* Add a hover color */
+    color: #d7721a; /* Add a hover color */
 }
 
-.explore {
+.Large {
     font-size: 60pt;
     font-weight:bolder;
     color: white;
@@ -103,12 +114,12 @@ button:hover {
     padding: 10px;
 }
 
-.description {
+.Small {
     font-size: 14pt;
     color: white;
     position: absolute;
     transform: translate(150px, 340px);
-    width: 660px;
-    background: #796b80a7;
+    background: #796b8080;
     padding: 10px;
+    width: 1000px;
 }
