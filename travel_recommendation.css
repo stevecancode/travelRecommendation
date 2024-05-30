@@ -64,7 +64,7 @@ input[type="text"], input[type="text"], textarea, select {
     padding: 10px;
     border-radius: 10px;
     border: none;
-    color: white;
+    color: black;
     background: none;
     font-size: 14pt;
 }
@@ -176,19 +176,19 @@ form {
 
 .results {
     float: right;
-    width: 600px;
-    /*height: 200px;*/
+    margin-right: 30px;
+    width: 500px;
     background-color:#796b8080;
 }
 
   /* Basic CSS for the report section */
-h2 {
-margin-top: 0px;
+h2, p {
+    margin-top: 10px;
+    color: white;
 }
 
 #result {
-    padding: 10px;
-    max-width: 400px;
+
     word-wrap: break-word;
     width: 500px;
     display: flex;
@@ -198,6 +198,7 @@ margin-top: 0px;
 }
 
 #result img {
-    width: 25%;
+    width: 90%;
+    border-radius: 10px;
     height: auto;
 }
