@@ -12,29 +12,29 @@ function searchCondition() {
         .then(response => response.json())
 
         .then(data => {
-            if (input === 'countries'){
+            if ('countries'.includes(input)){
                 const countriesLength = data.countries.length;
                 for (let i = 0; i < countriesLength; ++i) {
                     let citiesLength = data.countries[i].cities.length;
                     for (let y = 0; y < citiesLength; ++y) {
-                        resultDiv.innerHTML += `<h2>${data.countries[i].cities[y].name}</h2>`;
                         resultDiv.innerHTML += `<img src="${data.countries[i].cities[y].imageUrl}" alt="hjh">`;
+                        resultDiv.innerHTML += `<h2>${data.countries[i].cities[y].name}</h2>`;
                         resultDiv.innerHTML += `<p><strong>Description:</strong> ${data.countries[i].cities[y].description}</p>`;
                     }
                 }
-            } else if (input === 'temples') {
+            } else if ('temples'.includes(input)) {
                 const templesLength = data.temples.length;
                 for (let i = 0; i < templesLength; ++i) {
-                    resultDiv.innerHTML += `<h2>${data.temples[i].name}</h2>`;
                     resultDiv.innerHTML += `<img src="${data.temples[i].imageUrl}" alt="hjh">`;
+                    resultDiv.innerHTML += `<h2>${data.temples[i].name}</h2>`;
                     resultDiv.innerHTML += `<p><strong>Description:</strong> ${data.temples[i].description}</p>`;
                 }    
 
-            } else if (input === 'beaches') {
+            } else if ('beaches'.includes(input)) {
                 const beachesLength = data.beaches.length;
                 for (let i = 0; i < beachesLength; ++i) {
-                    resultDiv.innerHTML += `<h2>${data.beaches[i].name}</h2>`;
                     resultDiv.innerHTML += `<img src="${data.beaches[i].imageUrl}" alt="hjh">`;
+                    resultDiv.innerHTML += `<h2>${data.beaches[i].name}</h2>`;
                     resultDiv.innerHTML += `<p><strong>Description:</strong> ${data.beaches[i].description}</p>`;
                 }
 
