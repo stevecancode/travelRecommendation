@@ -12,7 +12,18 @@ function searchCondition() {
         .then(response => response.json())
 
         .then(data => {
-            const countryObj = data.countries.find(item => item.countries.name.toLowerCase() === input);
+            for (keyword in data) {
+                if (keyword === input) {
+                    for (country in keyword) {
+                        resultDiv.innerHTML += `<h2>${data.keyword.country.cities}</h2>`;
+                        /*resultDiv.innerHTML += `<img src="${country.cities.imageUrl}" alt="hjh">`;*/
+                        resultDiv.innerHTML += `<p><strong>Description:</strong> ${data.keyword.country.cities.description}</p>`;
+                    }
+                } 
+            }
+            
+            
+            /*const countryObj = data.countries.find(item => item.countries.name.toLowerCase() === input);
             const beachObj = data.beaches.find(item => item.countriesname.toLowerCase() === input);
             const templeObj = data.temples.find(item => item.countries.name.toLowerCase() === input);
             
@@ -25,13 +36,12 @@ function searchCondition() {
                 }
             } else {
             resultDiv.innerHTML = 'Destination or keyword not found.';
-            }
+            }*/
 
         })
         .catch(error => {
         console.error('Error:', error);
         resultDiv.innerHTML = 'An error occurred while fetching data.' + error;
-        resultDiv.innerHTML += input;
         });
 
 }
